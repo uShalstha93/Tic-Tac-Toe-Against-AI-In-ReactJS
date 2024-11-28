@@ -107,7 +107,7 @@ const TicTacToe = () => {
         if (!isXNext && !winner) {
             const bestMove = getBestMove(board);
             if (bestMove !== null) {
-                setTimeout(() => makeMove(bestMove, "O"), 500); // Slight delay for better UX
+                setTimeout(() => makeMove(bestMove, "O"), 800); // Slight delay for better UX
             }
         }
     }, [isXNext, winner, board, getBestMove, makeMove]);
