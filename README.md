@@ -2,14 +2,14 @@
 
 Tech Stack:
 
--React JS in Frontend
--React Bootstrap such as Model
--Minimax algorithm for AI
+- React JS in Frontend
+- React Bootstrap such as Model
+- Minimax algorithm for AI
 
 ## Features
 
--[x] Play Against AI
--[x] Difficulty Mode Level: Easy, Medium and Hard
+- [x] Play Against AI
+- [x] Difficulty Mode Level: Easy, Medium and Hard
 
 ## Authors
 
