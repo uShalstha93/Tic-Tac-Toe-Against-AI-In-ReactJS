@@ -20,7 +20,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background: radial-gradient(circle,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(30, 54, 59, 1) 0%,
+      rgb(66, 66, 86) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
