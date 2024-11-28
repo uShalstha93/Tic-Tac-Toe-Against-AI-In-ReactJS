@@ -1,0 +1,84 @@
+.game {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.game label {
+    color: white;
+    font-weight: 600;
+}
+
+.select-opt {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.game h2 {
+    font-size: 20px;
+    color: white;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    color: black;
+    user-select: none;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.restartgame,
+.startgame {
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(30, 98, 214);
+    border: 1px solid darkorange;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+.restartgame:hover,
+.startgame:hover {
+    background-color: gray;
+    color: white;
+}
+
+.gamemodalheader {
+    background-image: linear-gradient(to right, darkorange, white);
+}
+
+.gamemodalheader h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.gamemodalbody {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(30, 54, 59, 1) 0%,
+            rgba(93, 93, 116, 1) 100%);
+}
