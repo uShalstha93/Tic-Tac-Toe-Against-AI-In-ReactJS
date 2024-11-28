@@ -47,27 +47,76 @@
     background-color: #e0e0e0;
 }
 
-.restartgame,
-.startgame {
+.play-button {
+    --offset: 1px;
+    position: relative;
+    background: rgb(55, 21, 90);
+    border-radius: 50px;
+    height: 55px;
+    width: 150px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.play-button::before {
+    content: "";
+    background: conic-gradient(transparent 270deg, white, transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    width: 100%;
+    animation: rotate 2s linear infinite;
+}
+
+.play-button::after {
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% -2* var(--offset));
+    width: calc(100% -2* var(--offset));
+}
+
+.play-button button {
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    padding: 1rem;
+    border: none;
+    font-weight: 600;
+}
+
+.play-button button:hover {
+    color: rgb(179, 179, 179);
+}
+
+.restartgame {
     margin-top: 10px;
     padding: 5px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    background-color: rgb(30, 98, 214);
-    border: 1px solid darkorange;
+    background-color: rgb(55, 21, 90);
+    border: none;
     border-radius: 5px;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: white;
 }
 
-.restartgame:hover,
-.startgame:hover {
-    background-color: gray;
-    color: white;
+.restartgame:hover {
+    color: rgb(179, 179, 179);
 }
 
 .gamemodalheader {
-    background-image: linear-gradient(to right, darkorange, white);
+    background-image: linear-gradient(to right, rgb(55, 21, 90), white);
+    color: white;
+    margin-bottom: -5px;
+    margin-top: -5px;
 }
 
 .gamemodalheader h1 {
@@ -81,4 +130,14 @@
             rgba(2, 0, 36, 1) 0%,
             rgba(30, 54, 59, 1) 0%,
             rgba(93, 93, 116, 1) 100%);
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
 }
